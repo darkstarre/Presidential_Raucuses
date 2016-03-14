@@ -1,12 +1,11 @@
 require 'io/console'
-require 'politics'
+require 'meganlib.rb'
 
 class GameTest < Minitest::Test
   def test_displays_all_information_and_allows_you_to_quit
     clear = "\e[H\e[2J"
     game = Politics::Cli.new # <-- this thing can know about the command line, push the logic below it
 
-    if the string assertions get annoying, switch this to match against regexes
       # (assert_match and a regex instead of assert_equal and a string)
       to_print = game.input("")
       assert_equal "Welcome to the Presidential Raucuses!", to_print
@@ -62,4 +61,3 @@ class GameTest < Minitest::Test
       assert_equal "You died of a heart attack.\nThe end.\n", to_print
     end
   end
-end
