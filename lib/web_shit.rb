@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'meganlib.rb'
 
 set :port, 1337
 set :static, true
