@@ -3,7 +3,6 @@
 $LOAD_PATH.unshift File.expand_path("../../lib", __FILE__)
 
 require 'erb'
-load 'views.erb'
 require 'sinatra'
 require 'meganlib.rb'
 include Candidates
@@ -16,7 +15,8 @@ enable :sessions
 set :session_secret, 'BADSECRET'
 
 get '/' do
-
+  @whatever = 
+  
   "Welcome to the Presidential Raucuses!".split("").each { |c| print c ; sleep 0.08}
   sleep 3
   puts "\nGet ready to show the public what you stand for..."
@@ -40,3 +40,5 @@ get '/' do
     self.candidate_choice
   end
 end
+
+
